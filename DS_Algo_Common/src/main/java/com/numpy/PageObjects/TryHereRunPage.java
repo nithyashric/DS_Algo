@@ -51,10 +51,10 @@ public class TryHereRunPage {
 
 		if(commandOutput!=null)
 		{
-			MyLogger.error("command output is not null");
+			MyLogger.info("command output is not null");
 			return commandOutput.getText(); 
 		}
-		MyLogger.error("command output is null");
+		MyLogger.info("command output is null");
 		return null;
 	}	
 	
