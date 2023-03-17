@@ -20,7 +20,8 @@ public class StepDefinitionRunner extends AbstractTestNGCucumberTests {
 	@Parameters({"browser"})
 	public void loadBrowser(String browser)
 	{
-			DriverManager.getDriver(browser);
+		MyLogger.error("loading browser");
+			DriverManager.getDriver(browser,true);
 	
 	}
 
