@@ -1,1 +1,0 @@
-{"uuid":"32a3c661-6cec-48ac-af12-3f18f5905372","name":"com.numpy.TestCases.TC_LoginErrorTest_003","children":["c352f744-64b7-454a-9500-177c26203004"],"befores":[{"name":"beforeTest","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1679060738861,"stop":1679060738862}],"afters":[],"start":1679060725840,"stop":1679060845979}
