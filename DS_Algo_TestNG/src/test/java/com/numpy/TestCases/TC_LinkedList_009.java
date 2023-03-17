@@ -221,7 +221,7 @@ public void clickTryHereRunTypesofLinkedList() throws InterruptedException
 		rp.setInput("print(\"Hello\")");
 		Thread.sleep(100);
 		rp.clickbutton();
-		System.out.println(rp.getOutput());
+		//System.out.println(rp.getOutput());
 		//Thread.sleep(10000);
 		
 		if(rp.getOutput().equals("Hello"))
