@@ -13,6 +13,7 @@ import com.sun.tools.javac.util.Assert;
 public class DriverManager {
 
 	public static WebDriver driver;
+
 	public static WebDriver getDriver()
 	{
 		if(driver==null)
@@ -25,11 +26,19 @@ public class DriverManager {
 		}
 		return driver;
 	}
-	@SuppressWarnings("restriction")
+	
 	public static WebDriver getDriver(String browser)
 	{
-		MyLogger.info("Loading browser:"+browser);
 		if(driver==null)
+		{
+			driver=getDriver(browser,false);
+		}
+		return driver;
+	}
+	public static WebDriver getDriver(String browser,boolean force)
+	{
+		MyLogger.error("Loading browser:"+browser);
+		if (force || driver==null)
 		{
 			if(browser.equals("chrome"))
 			{
@@ -46,7 +55,7 @@ public class DriverManager {
 		}
 		else if(browser.equals("edge"))
 		{
-			MyLogger.info("Starting edge browser");
+			MyLogger.error("Starting edge browser");
 			WebDriverManager.edgedriver().forceDownload();
 			WebDriverManager.edgedriver().setup();
 		driver = new EdgeDriver();
