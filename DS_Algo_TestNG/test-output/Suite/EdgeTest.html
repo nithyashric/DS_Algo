@@ -1,0 +1,735 @@
+<html>
+<head>
+<title>TestNG:  EdgeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>EdgeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>121/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Mar 17 09:56:51 EDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>129 seconds (129561 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.numpy.TestCases.TC_RegisterTest_002.register()'><b>register</b><br>Test class: com.numpy.TestCases.TC_RegisterTest_002</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.numpy.TestCases.TC_RegisterTest_002.register(TC_RegisterTest_002.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace856000892", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace856000892'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.numpy.TestCases.TC_RegisterTest_002.register(TC_RegisterTest_002.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_RegisterTest_002@7f8a9499</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.checkGraph()'><b>checkGraph</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkBinarySearchTrees()'><b>checkBinarySearchTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereTraversal()'><b>clickTryHereTraversal</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunImplementationofBinaryTrees()'><b>clickTryHereRunImplementationofBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_LoginCheck_006.checkDataStructures()'><b>checkDataStructures</b><br>Test class: com.numpy.TestCases.TC_HomePage_LoginCheck_006</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_LoginCheck_006@2fba3fc4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.checkQueue()'><b>checkQueue</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunImplementationOfBST()'><b>clickTryHereRunImplementationOfBST</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Graph_013.clickTryHereRunGraph()'><b>clickTryHereRunGraph</b><br>Test class: com.numpy.TestCases.TC_Graph_013</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Graph_013@5d99c6b5</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_GetStarted_000.GetStartedPageTest()'><b>GetStartedPageTest</b><br>Test class: com.numpy.TestCases.TC_GetStarted_000</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_GetStarted_000@59e2d8e3</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereApplicationsofArray()'><b>clickTryHereApplicationsofArray</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunImplementationinPython()'><b>clickTryHereRunImplementationinPython</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunTerminologies()'><b>clickTryHereRunTerminologies</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.checkTree()'><b>checkTree</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereTreeTraversals()'><b>clickTryHereTreeTraversals</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkBinaryTrees()'><b>checkBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereOverviewofTrees()'><b>clickTryHereOverviewofTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHereRuncheckImplementationUsingArray()'><b>clickTryHereRuncheckImplementationUsingArray</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_DataStructures_007.clickTryHere()'><b>clickTryHere</b><br>Test class: com.numpy.TestCases.TC_DataStructures_007</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_DataStructures_007@4bf48f6</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_LoginCheck_006.checkStack()'><b>checkStack</b><br>Test class: com.numpy.TestCases.TC_HomePage_LoginCheck_006</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_LoginCheck_006@2fba3fc4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunApplicationsofBinarytrees()'><b>clickTryHereRunApplicationsofBinarytrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereTraversalsIllustration()'><b>clickTryHereTraversalsIllustration</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereRunBasicOperationsInLists()'><b>clickTryHereRunBasicOperationsInLists</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.clickTryHereApplications()'><b>clickTryHereApplications</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkTypesofBinaryTrees()'><b>checkTypesofBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereRunInsertion()'><b>clickTryHereRunInsertion</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHereImplementationUsingCollectionsDeque()'><b>clickTryHereImplementationUsingCollectionsDeque</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunBinaryTrees()'><b>clickTryHereRunBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkImplementationinPython()'><b>checkImplementationinPython</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunBinarySearchTrees()'><b>clickTryHereRunBinarySearchTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.checkArraysInPython()'><b>checkArraysInPython</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunTypesofTrees()'><b>clickTryHereRunTypesofTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereTypesofBinaryTrees()'><b>clickTryHereTypesofBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHereRunImplementationofQueueinPython()'><b>clickTryHereRunImplementationofQueueinPython</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHereRunQueueOperations()'><b>clickTryHereRunQueueOperations</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LoginErrorTest_003.loginFailureTest()'><b>loginFailureTest</b><br>Test class: com.numpy.TestCases.TC_LoginErrorTest_003</td>
+<td></td>
+<td>2</td>
+<td>com.numpy.TestCases.TC_LoginErrorTest_003@5d43661b</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.checkTraversal()'><b>checkTraversal</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_LoginCheck_006.checkArray()'><b>checkArray</b><br>Test class: com.numpy.TestCases.TC_HomePage_LoginCheck_006</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_LoginCheck_006@2fba3fc4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereBinaryTreeTraversals()'><b>clickTryHereBinaryTreeTraversals</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.checkImplementationUsingCollectionsDeque()'><b>checkImplementationUsingCollectionsDeque</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunTypesofBinaryTrees()'><b>clickTryHereRunTypesofBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkOverviewofTrees()'><b>checkOverviewofTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Graph_013.checkGraphRepresentations()'><b>checkGraphRepresentations</b><br>Test class: com.numpy.TestCases.TC_Graph_013</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Graph_013@5d99c6b5</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.checkApplicationsofArray()'><b>checkApplicationsofArray</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.checkBasicOperationsInLists()'><b>checkBasicOperationsInLists</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereImplementationofBinaryTrees()'><b>clickTryHereImplementationofBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkTerminologies()'><b>checkTerminologies</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_LoginCheck_006.checkGraph()'><b>checkGraph</b><br>Test class: com.numpy.TestCases.TC_HomePage_LoginCheck_006</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_LoginCheck_006@2fba3fc4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.checkDeletion()'><b>checkDeletion</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LoginTest_003.loginTest()'><b>loginTest</b><br>Test class: com.numpy.TestCases.TC_LoginTest_003</td>
+<td></td>
+<td>4</td>
+<td>com.numpy.TestCases.TC_LoginTest_003@12299890</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereBasicOperationsInLists()'><b>clickTryHereBasicOperationsInLists</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereRunImplementLinkedListinPython()'><b>clickTryHereRunImplementLinkedListinPython</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.clickTryHereOperationsinStack()'><b>clickTryHereOperationsinStack</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHereRunImplementationUsingCollectionsDeque()'><b>clickTryHereRunImplementationUsingCollectionsDeque</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereRunArraysUsingList()'><b>clickTryHereRunArraysUsingList</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkImplementationOfBST()'><b>checkImplementationOfBST</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_DataStructures_007.clickTryHereRun()'><b>clickTryHereRun</b><br>Test class: com.numpy.TestCases.TC_DataStructures_007</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_DataStructures_007@4bf48f6</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Graph_013.checkGraph()'><b>checkGraph</b><br>Test class: com.numpy.TestCases.TC_Graph_013</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Graph_013@5d99c6b5</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.checkImplementationofQueueinPython()'><b>checkImplementationofQueueinPython</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.checkTypesofLinkedList()'><b>checkTypesofLinkedList</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.clickTryHereRunApplications()'><b>clickTryHereRunApplications</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkTreeTraversals()'><b>checkTreeTraversals</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.checkQueueOperations()'><b>checkQueueOperations</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickImplementationOfBST()'><b>clickImplementationOfBST</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereTypesofTrees()'><b>clickTryHereTypesofTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>2</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereRunApplicationsofArray()'><b>clickTryHereRunApplicationsofArray</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereBinarySearchTrees()'><b>clickTryHereBinarySearchTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Graph_013.clickTryHereGraph()'><b>clickTryHereGraph</b><br>Test class: com.numpy.TestCases.TC_Graph_013</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Graph_013@5d99c6b5</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_DataStructures_007.checkTimeComplexity()'><b>checkTimeComplexity</b><br>Test class: com.numpy.TestCases.TC_DataStructures_007</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_DataStructures_007@4bf48f6</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.checkImplementation()'><b>checkImplementation</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkImplementationofBinaryTrees()'><b>checkImplementationofBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHerecheckImplementationUsingArray()'><b>clickTryHerecheckImplementationUsingArray</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.checkInsertion()'><b>checkInsertion</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereRunDeletion()'><b>clickTryHereRunDeletion</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.checkImplementationUsingArray()'><b>checkImplementationUsingArray</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_LoginCheck_006.checkQueue()'><b>checkQueue</b><br>Test class: com.numpy.TestCases.TC_HomePage_LoginCheck_006</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_LoginCheck_006@2fba3fc4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Graph_013.clickTryHereGraphRepresentations()'><b>clickTryHereGraphRepresentations</b><br>Test class: com.numpy.TestCases.TC_Graph_013</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Graph_013@5d99c6b5</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereImplementationinPython()'><b>clickTryHereImplementationinPython</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereRunTypesofLinkedList()'><b>clickTryHereRunTypesofLinkedList</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>2</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkBinaryTreeTraversals()'><b>checkBinaryTreeTraversals</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunOverviewofTrees()'><b>clickTryHereRunOverviewofTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunTreeTraversals()'><b>clickTryHereRunTreeTraversals</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereApplicationsofBinarytrees()'><b>clickTryHereApplicationsofBinarytrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_LoginCheck_006.checkTree()'><b>checkTree</b><br>Test class: com.numpy.TestCases.TC_HomePage_LoginCheck_006</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_LoginCheck_006@2fba3fc4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Graph_013.clickTryHereRunGraphRepresentations()'><b>clickTryHereRunGraphRepresentations</b><br>Test class: com.numpy.TestCases.TC_Graph_013</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Graph_013@5d99c6b5</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_LoginCheck_006.checkLinkedList()'><b>checkLinkedList</b><br>Test class: com.numpy.TestCases.TC_HomePage_LoginCheck_006</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_LoginCheck_006@2fba3fc4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.clickTryHereRunImplementation()'><b>clickTryHereRunImplementation</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkApplicationsofBinarytrees()'><b>checkApplicationsofBinarytrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereIntroduction()'><b>clickTryHereIntroduction</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereRunArraysInPython()'><b>clickTryHereRunArraysInPython</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.checkStack()'><b>checkStack</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHereImplementationofQueueinPython()'><b>clickTryHereImplementationofQueueinPython</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereTerminologies()'><b>clickTryHereTerminologies</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereRunIntroduction()'><b>clickTryHereRunIntroduction</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereRunTraversal()'><b>clickTryHereRunTraversal</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.checkOperationsinStack()'><b>checkOperationsinStack</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.checkImplementLinkedListinPython()'><b>checkImplementLinkedListinPython</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkTypesofTrees()'><b>checkTypesofTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereRunCreatingLinkedLIst()'><b>clickTryHereRunCreatingLinkedLIst</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereArraysInPython()'><b>clickTryHereArraysInPython</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunBinaryTreeTraversals()'><b>clickTryHereRunBinaryTreeTraversals</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.clickTryHereImplementation()'><b>clickTryHereImplementation</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereImplementLinkedListinPython()'><b>clickTryHereImplementLinkedListinPython</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.checkArraysUsingList()'><b>checkArraysUsingList</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereTypesofLinkedList()'><b>clickTryHereTypesofLinkedList</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereRunTraversalsIllustration()'><b>clickTryHereRunTraversalsIllustration</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.checkLinkedList()'><b>checkLinkedList</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereInsertion()'><b>clickTryHereInsertion</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.checkTraversalsIllustration()'><b>checkTraversalsIllustration</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.checkApplications()'><b>checkApplications</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Queue_011.clickTryHereQueueOperations()'><b>clickTryHereQueueOperations</b><br>Test class: com.numpy.TestCases.TC_Queue_011</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Queue_011@1c852c0f</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.checkCreatingLinkedLIst()'><b>checkCreatingLinkedLIst</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.homePageTest()'><b>homePageTest</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Stack_010.clickTryHereRunOperationsinStack()'><b>clickTryHereRunOperationsinStack</b><br>Test class: com.numpy.TestCases.TC_Stack_010</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Stack_010@62833051</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereCreatingLinkedLIst()'><b>clickTryHereCreatingLinkedLIst</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.checkArray()'><b>checkArray</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Array_008.clickTryHereArraysUsingList()'><b>clickTryHereArraysUsingList</b><br>Test class: com.numpy.TestCases.TC_Array_008</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_Array_008@420a85c4</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_HomePage_001.checkDataStructures()'><b>checkDataStructures</b><br>Test class: com.numpy.TestCases.TC_HomePage_001</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_HomePage_001@2b72cb8a</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.checkIntroduction()'><b>checkIntroduction</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LinkedList_009.clickTryHereDeletion()'><b>clickTryHereDeletion</b><br>Test class: com.numpy.TestCases.TC_LinkedList_009</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_LinkedList_009@1c39680d</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_Tree_012.clickTryHereBinaryTrees()'><b>clickTryHereBinaryTrees</b><br>Test class: com.numpy.TestCases.TC_Tree_012</td>
+<td></td>
+<td>1</td>
+<td>com.numpy.TestCases.TC_Tree_012@a37aefe</td></tr>
+<tr>
+<td title='com.numpy.TestCases.TC_LogoutTest_004.loginFailureTest()'><b>loginFailureTest</b><br>Test class: com.numpy.TestCases.TC_LogoutTest_004</td>
+<td></td>
+<td>0</td>
+<td>com.numpy.TestCases.TC_LogoutTest_004@266374ef</td></tr>
+</table><p>
+</body>
+</html>

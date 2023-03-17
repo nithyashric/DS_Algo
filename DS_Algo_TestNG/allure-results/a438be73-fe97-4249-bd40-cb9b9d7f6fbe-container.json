@@ -1,0 +1,1 @@
+{"uuid":"a438be73-fe97-4249-bd40-cb9b9d7f6fbe","name":"com.numpy.TestCases.TC_LogoutTest_004","children":["30906f87-24ab-4613-90cf-fe88856751b6"],"befores":[{"name":"beforeTest","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1679060535368,"stop":1679060535368}],"afters":[],"start":1679060533707,"stop":1679060535394}
