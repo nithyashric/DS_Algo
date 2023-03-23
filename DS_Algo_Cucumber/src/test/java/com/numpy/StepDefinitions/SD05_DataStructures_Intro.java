@@ -65,7 +65,7 @@ public class SD05_DataStructures_Intro {
 	public void the_user_is_redirected_to_homepage()
 	{
 		MyLogger.error("Function:"+Thread.currentThread().getStackTrace()[1].getMethodName());
-		HomePage lp = new HomePage(driver);
+		HomePage hp = new HomePage(driver);
 	}
 
 	//@TS_DS_02
@@ -170,7 +170,7 @@ public class SD05_DataStructures_Intro {
 		rp.clickbutton();
 		
 	}
-
+//
 	@Then("The user should be presented with {string} result")
 	public void the_user_should_be_presented_with_run_result(String string) {
 		TryHereRunPage rp=new TryHereRunPage(driver);

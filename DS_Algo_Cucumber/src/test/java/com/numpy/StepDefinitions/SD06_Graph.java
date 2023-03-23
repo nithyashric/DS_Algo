@@ -50,7 +50,7 @@ public class SD06_Graph {
 			Assert.assertTrue(false);
 		}
 	}
-
+//TS_DS_03
 	@Given("The user is on the Graph page after logged in")
 	public void the_user_is_on_the_graph_page_after_logged_in() {
 		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
@@ -100,7 +100,7 @@ public void the_user_should_be_redirected_to_particular_links_in_graph_page(Stri
 
 
 }
-
+//TS_DS_04
 @When("The user clicks Try Here button on {string} links in Graph page")
 public void the_user_clicks_try_here_button_on_links_in_graph_page(String string) {
 	HomePage hp = new HomePage(driver);
@@ -142,7 +142,7 @@ public void the_user_clicks_try_here_button_on_links_in_graph_page(String string
 		
 	} 
 }
-
+//TS_DS_05
 @Given("The user is on the {string} in Graph page after logged in")
 public void the_user_is_on_the_in_graph_page_after_logged_in(String string) {
 	HomePage hp = new HomePage(driver);

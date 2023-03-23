@@ -15,7 +15,7 @@ Feature: Validating Register page and registering new user
   @TS_register_03
   Scenario: The user is presented with error message for empty fields below Password textbox
     Given The user opens Register Page
-    When The user clicks "Register" button after entering username with other fields empty
+    When The user clicks "Register" button after entering "username" with other fields empty
       | username       |
       | Nithya26 	   |	
     Then It should display an error message "Please fill out this field." below Password textbox
