@@ -4,8 +4,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.numpy.PageObjects.ArrayPage;
 import com.numpy.PageObjects.HomePage;
+import com.numpy.PageObjects.QueuePage;
 import com.numpy.PageObjects.TryHerePage;
 import com.numpy.PageObjects.TryHereRunPage;
 import com.numpy.utils.ConfigReader;
@@ -15,7 +15,7 @@ import com.numpy.utils.Screenshot;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.*;
 
-public class SD08_Array {
+public class SD11_Queue {
 	
 	public static WebDriver driver;
 	public HomePage hp;
@@ -27,20 +27,18 @@ public class SD08_Array {
 	}
 
 	//TS_DS_02
-	@When("The user clicks the Getting Started button in Array page")
-	public void the_user_clicks_the_getting_started_button_in_array_page() {
-		
+	@When("The user clicks the Getting Started button in Queue page")
+	public void the_user_clicks_the_getting_started_button_in_queue_page() {
+
 		HomePage hp = new HomePage(driver);
-		hp.clickArray();
-	    
+		hp.clickQueue();
 	}
 
-	@Then("The user be directed to Array page")
-	public void the_user_be_directed_to_array_page() {
-	    
+	@Then("The user be directed to Queue page")
+	public void the_user_be_directed_to_queue_page() {
 		WebElement Label = driver.findElement(By.xpath("/html/body/div[2]/h4"));
 
-		if (Label.getText().trim().equals("Array"))
+		if (Label.getText().trim().equals("Queue"))
 
 		{
 			Assert.assertTrue(true);
@@ -49,31 +47,28 @@ public class SD08_Array {
 					driver);
 			Assert.assertTrue(false);
 		}
-		
+
 	}
-	
-	//TS_DS_03
-	
-	@Given("The user is on the Array page after logged in")
-	public void the_user_is_on_the_array_page_after_logged_in() {
+//TS_DS_03
+	@Given("The user is on the Queue page after logged in")
+	public void the_user_is_on_the_queue_page_after_logged_in() {
 		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
-		hp.clickArray();
-	    
+		hp.clickQueue();
 	}
 
-	@When("The user clicks {string} links in Array page")
-	public void the_user_clicks_links_in_array_page(String string) {
-		ArrayPage ap = new ArrayPage(driver);
+	@When("The user clicks {string} links in Queue page")
+	public void the_user_clicks_links_in_queue_page(String string) {
+		QueuePage qp = new QueuePage(driver);
 		string=string.trim();
-		if (string.equals("Arrays in Python")) {
-			ap.clickarraysInPython();
-		} else if (string.equals("Arrays Using List")) {
-			ap.clickarraysUsingList();
-		}else if (string.equals("Basic Operations in Lists")) {
-			ap.clickbasicsOperationsInLists();
-		}else if (string.equals("Applications of Array")) {
-			ap.clickapplicationsOfArray();
+		if (string.equals("Implementation of Queue in Python")) {
+			qp.clickImplementaionOfQueueInPython();
+		} else if (string.equals("Implementation using collections.deque")) {
+			qp.clickImplementationUsingCollections();
+		}else if (string.equals("Implementation using array")) {
+			qp.clickImplementationUsingArray();
+		}else if (string.equals("Queue Operations")) {
+			qp.clickQueueOperations();
 		}
 		else
 		{
@@ -81,14 +76,14 @@ public class SD08_Array {
 		}
 	}
 
-	@Then("The user should be redirected to particular {string} links in Array page")
-	public void the_user_should_be_redirected_to_particular_links_in_array_page(String string) {
+	@Then("The user should be redirected to particular {string} links in Queue page")
+	public void the_user_should_be_redirected_to_particular_links_in_queue_page(String string) {
 		string=string.trim();
-		if (string.equals("Arrays in Python")) {
+		if (string.equals("Implementation of Queue in Python")) {
 
 			WebElement Label = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/strong/p"));
 
-			if (Label.getText().trim().equals("Arrays in Python")) {
+			if (Label.getText().trim().equals("Implementation of Queue in Python")) {
 				Assert.assertTrue(true);
 			} else {
 				Screenshot.take(
@@ -96,12 +91,12 @@ public class SD08_Array {
 						driver);
 				Assert.assertTrue(false);
 			}
-		} else if (string.equals("Arrays Using List")) {
+		} else if (string.equals("Implementation using collections.deque")) {
 
 			WebElement Label = driver
 					.findElement(By.xpath("/html/body/div[2]/div/div[2]/strong/p"));
 
-			if (Label.getText().trim().equals("Arrays Using List")) {
+			if (Label.getText().trim().equals("Implementation using collections.deque")) {
 				Assert.assertTrue(true);
 			} else {
 				Screenshot.take(
@@ -109,12 +104,12 @@ public class SD08_Array {
 						driver);
 				Assert.assertTrue(false);
 			}
-		} else if (string.equals("Basic Operations in Lists")) {
+		} else if (string.equals("Implementation using array")) {
 
 			WebElement Label = driver
 					.findElement(By.xpath("/html/body/div[2]/div/div[2]/strong/p"));
 
-			if (Label.getText().trim().equals("Basic Operations in Lists")) {
+			if (Label.getText().trim().equals("Implementation using array")) {
 				Assert.assertTrue(true);
 			} else {
 				Screenshot.take(
@@ -124,12 +119,12 @@ public class SD08_Array {
 			}
 		}
 		
-		else if (string.equals("Applications of Array")) {
+		else if (string.equals("Queue Operations")) {
 
 			WebElement Label = driver
 					.findElement(By.xpath("/html/body/div[2]/div/div[2]/strong/p"));
 
-			if (Label.getText().trim().equals("Applications of Array")) {
+			if (Label.getText().trim().equals("Queue Operations")) {
 				Assert.assertTrue(true);
 			} else {
 				Screenshot.take(
@@ -143,20 +138,19 @@ public class SD08_Array {
 			Assert.fail("Invalid user click:"+string);
 		}
    
+
 	}
-	
-	//TS_DS_04
-	
-	@When("The user clicks Try Here button on {string} links in Array page")
-	public void the_user_clicks_try_here_button_on_links_in_array_page(String string) {
+//TS_DS_04
+	@When("The user clicks Try Here button on {string} links in Queue page")
+	public void the_user_clicks_try_here_button_on_links_in_queue_page(String string) {
 		HomePage hp = new HomePage(driver);
-		hp.clickArray();
+		hp.clickQueue();
 		string=string.trim();
-		ArrayPage ap = new ArrayPage(driver);
-		if (string.equals("Arrays in Python")) 
+		QueuePage qp = new QueuePage(driver);
+		if (string.equals("Implementation of Queue in Python")) 
 		
 		{
-			ap.clickarraysInPython();
+			qp.clickImplementaionOfQueueInPython();
 			TryHerePage th = new TryHerePage(driver);
 			th.clickTryHere();
 			WebElement inputLabel = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[6]/div[1]/div/div/div/div[5]/div/div/div"));
@@ -169,9 +163,9 @@ public class SD08_Array {
 				Assert.assertTrue(false);
 			}
 			
-		} else if (string.equals("Arrays Using List")) {
+		} else if (string.equals("Implementation using collections.deque")) {
 			
-			ap.clickarraysUsingList();
+			qp.clickImplementationUsingCollections();
 			TryHerePage th = new TryHerePage(driver);
 			th.clickTryHere();
 			
@@ -187,9 +181,9 @@ public class SD08_Array {
 			
 		}
 		
-	else if (string.equals("Basic Operations in Lists")) {
+	else if (string.equals("Implementation using array")) {
 			
-			ap.clickbasicsOperationsInLists();
+			qp.clickImplementationUsingArray();
 			TryHerePage th = new TryHerePage(driver);
 			th.clickTryHere();
 			
@@ -205,9 +199,9 @@ public class SD08_Array {
 				Assert.assertTrue(false);
 			}
 	}
-			else if (string.equals("Applications of Array")) {
+			else if (string.equals("Queue Operations")) {
 				
-				ap.clickapplicationsOfArray();
+				qp.clickQueueOperations();
 				TryHerePage th = new TryHerePage(driver);
 				th.clickTryHere();
 				
@@ -231,32 +225,32 @@ public class SD08_Array {
 			
 
 	}
-	//TS_DS_05
+//TS_DS_05
+	@Given("The user is on the {string} in Queue page after logged in")
 	
-	@Given("The user is on the {string} in Array page after logged in")
-	public void the_user_is_on_the_in_array_page_after_logged_in(String string) {
+	public void the_user_is_on_the_in_queue_page_after_logged_in(String string) {
 		string=string.trim();
 		HomePage hp = new HomePage(driver);
-		hp.clickArray();
-		ArrayPage ap = new ArrayPage(driver);
-		if (string.equals("Arrays in Python")) {
-			ap.clickarraysInPython();
+		hp.clickQueue();
+		QueuePage qp = new QueuePage(driver);
+		if (string.equals("Implementation of Queue in Python")) {
+			qp.clickImplementaionOfQueueInPython();
 			TryHerePage th = new TryHerePage(driver);
 			th.clickTryHere();
 
 			
-		} else if (string.equals("Arrays Using List")) {
-			ap.clickarraysUsingList();
+		} else if (string.equals("Implementation using collections.deque")) {
+			qp.clickImplementationUsingCollections();
 			TryHerePage th = new TryHerePage(driver);
 			th.clickTryHere();
 
-		}else if (string.equals("Basic Operations in Lists")) {
-			ap.clickbasicsOperationsInLists();
+		}else if (string.equals("Implementation using array")) {
+			qp.clickImplementationUsingArray();
 			TryHerePage th = new TryHerePage(driver);
 			th.clickTryHere();
 
-		}else if (string.equals("Applications of Array")) {
-			ap.clickapplicationsOfArray();
+		}else if (string.equals("Queue Operations")) {
+			qp.clickQueueOperations();
 			TryHerePage th = new TryHerePage(driver);
 			th.clickTryHere();
 		}
@@ -264,17 +258,18 @@ public class SD08_Array {
 		{
 			Assert.fail("Invalid user click:"+string);
 		}
+
 	}
 
-	@When("The user enter python code with {string} syntax in tryEditor in {string} from config.properties in Array page")
-	public void the_user_enter_python_code_with_syntax_in_try_editor_in_from_config_properties_in_array_page(String string, String string2) {
+	@When("The user enter python code with {string} syntax in tryEditor in {string} from config.properties in Queue page")
+	public void the_user_enter_python_code_with_syntax_in_try_editor_in_from_config_properties_in_queue_page(String string, String string2) {
 		TryHereRunPage rp=new TryHereRunPage(driver);
 		rp.setInput(ConfigReader.getProperty("app."+string));
 		rp.clickbutton();
 	}
 
 
-
+	
 	}
 
-
+	

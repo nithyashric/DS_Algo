@@ -33,7 +33,7 @@ Feature: User launch dsalgo application and test Data Structure introduction pag
 
     
 @TS_DS_06
-  Scenario: The user is able run validInput code in tryEditor for Time Complexity page
+  Scenario: The user is able run invalidInput code in tryEditor for Time Complexity page
     Given The user is on the Data Structures Introduction after logged in
     When The user enter python code with "invalidInput" syntax in tryEditor from config.properties
     Then The user should be presented with "invalidOutput" result

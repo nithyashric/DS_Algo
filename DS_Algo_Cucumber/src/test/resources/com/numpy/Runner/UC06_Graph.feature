@@ -43,7 +43,7 @@ Feature: User launch dsalgo application and test Graph page
       | Graph Representations |
     
 @TS_DS_06
-  Scenario Outline: The user is able run validInput code in tryEditor for "<topics>" in Graph page
+  Scenario Outline: The user is able run invalidInput code in tryEditor for "<topics>" in Graph page
     Given The user is on the "<topics>" in Graph page after logged in
     When The user enter python code with "invalidInput" syntax in tryEditor in "<topics>" from config.properties in Graph page
     Then The user should be presented with "invalidOutput" result

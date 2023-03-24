@@ -74,7 +74,7 @@ Feature: User launch dsalgo application and test Tree page
 	| Implementation Of BST		|
     
     @TS_DS_06
-  Scenario Outline: The user is able run validInput code in tryEditor for "<topics>" in Tree page
+  Scenario Outline: The user is able run invalidInput code in tryEditor for "<topics>" in Tree page
     Given The user is on the "<topics>" in Tree page after logged in
     When The user enter python code with "invalidInput" syntax in tryEditor in "<topics>" from config.properties in Tree page
     Then The user should be presented with "invalidOutput" result
