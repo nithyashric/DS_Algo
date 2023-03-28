@@ -22,7 +22,11 @@
   </properties>
 
   <dependencies>
-
+<dependency>
+	<groupId>DS_algoV1</groupId>
+	<artifactId>DS_algoV1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+</dependency>
 
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
