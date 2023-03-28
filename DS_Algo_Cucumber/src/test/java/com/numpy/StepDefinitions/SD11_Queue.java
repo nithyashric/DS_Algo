@@ -22,7 +22,7 @@ public class SD11_Queue {
 
 	@BeforeAll
 	public static void setup() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		driver = DriverManager.getDriver();
 	}
 
@@ -52,7 +52,7 @@ public class SD11_Queue {
 //TS_DS_03
 	@Given("The user is on the Queue page after logged in")
 	public void the_user_is_on_the_queue_page_after_logged_in() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
 		try {
 			Thread.sleep(500);

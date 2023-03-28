@@ -20,7 +20,7 @@ public class SD03_Register {
 
 	@BeforeAll
 	public static void setup() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		driver = DriverManager.getDriver();
 	}
 
