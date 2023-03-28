@@ -57,6 +57,7 @@ public class SD11_Queue {
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
+			MyLogger.error("Interrupted exception:"+e.toString());
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -102,6 +103,7 @@ public class SD11_Queue {
 		}
 		else
 		{
+			MyLogger.error("Invalid user click");
 			Assert.fail("Invalid user click:"+string);
 		}
 	}
