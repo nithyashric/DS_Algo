@@ -155,6 +155,8 @@ public class SD03_Register {
 		rp.setuserNameInput("Nithya26");
 		rp.setPasswordInput("Numpyninja");
 		rp.setPasswordConfirmationInput("Numpyninja123");
+		Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
+				driver);
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
@@ -187,6 +189,8 @@ public class SD03_Register {
 		rp.setuserNameInput("Nithya**");
 		rp.setPasswordInput("Numpyninja");
 		rp.setPasswordConfirmationInput("Numpyninja");
+		Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
+				driver);
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
@@ -205,6 +209,8 @@ public class SD03_Register {
 		rp.setuserNameInput("Nithya26");
 		rp.setPasswordInput("Numpy");
 		rp.setPasswordConfirmationInput("Numpy");
+		Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
+				driver);
 
 		try {
 			Thread.sleep(500);
@@ -242,6 +248,8 @@ public class SD03_Register {
 		rp.setuserNameInput("Nithya26");
 		rp.setPasswordInput("Welcome123");
 		rp.setPasswordConfirmationInput("Welcome123");
+		Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
+				driver);
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
@@ -259,6 +267,8 @@ public class SD03_Register {
 		rp.setuserNameInput("Nithya26");
 		rp.setPasswordInput("12345678");
 		rp.setPasswordConfirmationInput("12345678");
+		Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
+				driver);
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
@@ -274,9 +284,10 @@ public class SD03_Register {
 			io.cucumber.datatable.DataTable dataTable) {
 		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		RegisterPage rp = new RegisterPage(driver);
-		rp.setuserNameInput("Nithya39");
+		rp.setuserNameInput("Nithya41");
 		rp.setPasswordInput("Numpyninja");
 		rp.setPasswordConfirmationInput("Numpyninja");
+		
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
@@ -289,7 +300,7 @@ public class SD03_Register {
 	@Then("The user should be redirected to Homepage with the message {string} in Homepage")
 	public void the_user_should_be_redirected_to_homepage_with_the_message_in_homepage(String string) {
 		WebElement registercheck = driver.findElement(By.xpath("/html/body/div[2]"));
-		if (registercheck.getText().trim().equals("New Account Created. You are logged in as Nithya39")) {
+		if (registercheck.getText().trim().equals("New Account Created. You are logged in as Nithya41")) {
 			Assert.assertTrue(true);
 		} else {
 			Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),

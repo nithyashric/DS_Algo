@@ -32,7 +32,7 @@ public class SD05_DataStructures_Intro {
 //Background
 	@Given("The user is on Signin page of DS Algo portal")
 	public void the_user_is_on_signin_page_of_ds_algo_portal() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
 		WebElement checkSignin = driver.findElement(By.xpath("//*[@id=\"navbarCollapse\"]/div[2]/ul/a[3]"));
 		if (checkSignin.getText().trim().equals("Sign in")) {
@@ -42,12 +42,12 @@ public class SD05_DataStructures_Intro {
 
 	@When("The user Login with valid username and password from config")
 	public void the_user_login_with_valid_username_and_password_from_config() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		WebElement checkSignin = driver.findElement(By.xpath("//*[@id=\"navbarCollapse\"]/div[2]/ul/a[3]"));
-		MyLogger.error("gettext:" + checkSignin.getText());
+		MyLogger.info("gettext:" + checkSignin.getText());
 
 		if (checkSignin.getText().trim().equals("Sign in")) {
-			MyLogger.error("logging in:" + checkSignin.getText());
+			MyLogger.info("logging in:" + checkSignin.getText());
 			LoginPage lp = new LoginPage(driver);
 			lp.setUserName(ConfigReader.getProperty("app.userName"));
 			lp.setPassword(ConfigReader.getProperty("app.password"));
@@ -59,32 +59,22 @@ public class SD05_DataStructures_Intro {
 
 	@Then("The user is redirected to homepage")
 	public void the_user_is_redirected_to_homepage() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
 	}
 
 	// @TS_DS_02
 	@Given("The user is on the home page after logged in")
 	public void the_user_is_on_the_home_page_after_logged_in() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 	@When("The user clicks the Getting Started button in Data Structures_Introduction Page introduction Panel")
 	public void the_user_clicks_the_getting_started_button_in_data_structures_introduction_page_introduction_panel() {
 		HomePage hp = new HomePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		hp.clickDataStructures();
 
 	}
@@ -97,12 +87,7 @@ public class SD05_DataStructures_Intro {
 		if (timeComplexityLabel.getText().trim().equals("Data Structures-Introduction"))
 
 		{
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 			Assert.assertTrue(true);
 		} else {
 			Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
@@ -116,12 +101,6 @@ public class SD05_DataStructures_Intro {
 	public void the_user_is_on_the_data_structures_introduction_after_logged_in() {
 		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		hp.clickDataStructures();
 	}
 

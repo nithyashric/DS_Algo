@@ -21,20 +21,14 @@ public class SD04_SigninAndSignout {
 
 	@BeforeAll
 	public static void setup() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		driver = DriverManager.getDriver();
 	}
 
 	@Given("The user is on signin page")
 	public void the_user_is_on_signin_page() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		hp.clicklogin();
 	}
 
@@ -55,15 +49,12 @@ public class SD04_SigninAndSignout {
 
 	@Then("It should display error message {string}")
 	public void it_should_display_error_message(String string) {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		WebElement Text = driver.findElement(By.xpath("/html/body/div[3]"));
 		if (Text.getText().trim().equals("Invalid Username and Password")) {
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
+					driver);
+			
 			Assert.assertTrue(true);
 		} else {
 			Screenshot.take(this.getClass().getName(), driver);

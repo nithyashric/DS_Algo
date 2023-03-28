@@ -31,66 +31,24 @@ public class SD02_Home {
 	public void the_user_clicks_on_get_started_link_on_homepage_without_login(String string) {
 		switch (string) {
 		case "Datastructures":
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			hp.clickDataStructures();
 			break;
 		case "Arrays":
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			hp.clickArray();
 			break;
 		case "Linkedlist":
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			hp.clickLinkedList();
 			break;
 		case "Stack":
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			hp.clickStack();
 			break;
 		case "Queue":
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			hp.clickQueue();
 			break;
 		case "Tree":
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			hp.clickTree();
 			break;
 		case "Graph":
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			hp.clickGraph();
 			break;
 
@@ -104,12 +62,6 @@ public class SD02_Home {
 		WebElement logincheck = driver.findElement(By.xpath("/html/body/div[2]"));
 
 		if (logincheck.getText().trim().equals("You are not logged in")) {
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			Assert.assertTrue(true);
 		} else {
 			Assert.assertTrue(false);
@@ -143,12 +95,6 @@ public class SD02_Home {
 
 	@When("The user clicks Register link")
 	public void the_user_clicks_register_link() {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		hp.clickregister();
 	}
 
@@ -159,12 +105,6 @@ public class SD02_Home {
 		if (Username.getText().trim().equals("Username:"))
 
 		{
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			Assert.assertTrue(true);
 		} else {
 			Assert.assertTrue(false);
@@ -174,12 +114,6 @@ public class SD02_Home {
 	@When("The user clicks on Sign in link")
 	public void the_user_clicks_on_sign_in_link() {
 		hp = new HomePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		hp.clicklogin();
 	}
 
