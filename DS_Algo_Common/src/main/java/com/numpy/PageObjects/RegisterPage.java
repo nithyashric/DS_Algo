@@ -29,15 +29,19 @@ public class RegisterPage {
 	
 	public void setuserNameInput(String uname)
 	{
+		userNameInput.clear();
+		
 		userNameInput.sendKeys(uname);
 	}
 	
 	public void setPasswordInput(String pwd)
 	{
+		passwordInput.clear();
 		passwordInput.sendKeys(pwd);
 	}
 	public void setPasswordConfirmationInput(String pwd)
 	{
+		passwordConfirmationInput.clear();
 		passwordConfirmationInput.sendKeys(pwd);
 	}
 	public void clickregister()
