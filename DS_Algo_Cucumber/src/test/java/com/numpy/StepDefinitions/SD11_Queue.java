@@ -54,6 +54,12 @@ public class SD11_Queue {
 	public void the_user_is_on_the_queue_page_after_logged_in() {
 		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		hp.clickQueue();
 	}
 
@@ -62,12 +68,36 @@ public class SD11_Queue {
 		QueuePage qp = new QueuePage(driver);
 		string=string.trim();
 		if (string.equals("Implementation of Queue in Python")) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			qp.clickImplementaionOfQueueInPython();
 		} else if (string.equals("Implementation using collections.deque")) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			qp.clickImplementationUsingCollections();
 		}else if (string.equals("Implementation using array")) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			qp.clickImplementationUsingArray();
 		}else if (string.equals("Queue Operations")) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			qp.clickQueueOperations();
 		}
 		else
@@ -149,9 +179,20 @@ public class SD11_Queue {
 		QueuePage qp = new QueuePage(driver);
 		if (string.equals("Implementation of Queue in Python")) 
 		
-		{
+		{try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 			qp.clickImplementaionOfQueueInPython();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			WebElement inputLabel = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[6]/div[1]/div/div/div/div[5]/div/div/div"));
 
@@ -164,10 +205,22 @@ public class SD11_Queue {
 			}
 			
 		} else if (string.equals("Implementation using collections.deque")) {
-			
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			qp.clickImplementationUsingCollections();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
+			
 			
 			WebElement inputLabel = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[6]/div[1]/div/div/div/div[5]/div/div/div"));
 
@@ -182,9 +235,20 @@ public class SD11_Queue {
 		}
 		
 	else if (string.equals("Implementation using array")) {
-			
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 			qp.clickImplementationUsingArray();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -200,9 +264,20 @@ public class SD11_Queue {
 			}
 	}
 			else if (string.equals("Queue Operations")) {
-				
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				qp.clickQueueOperations();
 				TryHerePage th = new TryHerePage(driver);
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				th.clickTryHere();
 				
 
@@ -231,27 +306,57 @@ public class SD11_Queue {
 	public void the_user_is_on_the_in_queue_page_after_logged_in(String string) {
 		string=string.trim();
 		HomePage hp = new HomePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		hp.clickQueue();
 		QueuePage qp = new QueuePage(driver);
 		if (string.equals("Implementation of Queue in Python")) {
 			qp.clickImplementaionOfQueueInPython();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 			
 		} else if (string.equals("Implementation using collections.deque")) {
 			qp.clickImplementationUsingCollections();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 		}else if (string.equals("Implementation using array")) {
 			qp.clickImplementationUsingArray();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 		}else if (string.equals("Queue Operations")) {
 			qp.clickQueueOperations();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 		}
 		else
@@ -265,6 +370,12 @@ public class SD11_Queue {
 	public void the_user_enter_python_code_with_syntax_in_try_editor_in_from_config_properties_in_queue_page(String string, String string2) {
 		TryHereRunPage rp=new TryHereRunPage(driver);
 		rp.setInput(ConfigReader.getProperty("app."+string));
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		rp.clickbutton();
 	}
 

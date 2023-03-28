@@ -127,6 +127,12 @@ public class SD10_Stack {
 	@When("The user clicks Try Here button on {string} links in Stack page")
 	public void the_user_clicks_try_here_button_on_links_in_stack_page(String string) {
 		HomePage hp = new HomePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		hp.clickStack();
 		string=string.trim();
 		StackPage sp = new StackPage(driver);
@@ -135,6 +141,12 @@ public class SD10_Stack {
 		{
 			sp.clickoperationsInStack();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			WebElement inputLabel = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[6]/div[1]/div/div/div/div[5]/div/div/div"));
 
@@ -147,9 +159,20 @@ public class SD10_Stack {
 			}
 			
 		} else if (string.equals("Implementation")) {
-			
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			sp.clickimplementation();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 			WebElement inputLabel = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[6]/div[1]/div/div/div/div[5]/div/div/div"));
@@ -165,9 +188,20 @@ public class SD10_Stack {
 		}
 		
 	else if (string.equals("Applications")) {
-			
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 			sp.clickapplications();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -193,22 +227,64 @@ public class SD10_Stack {
 	public void the_user_is_on_the_in_stack_page_after_logged_in(String string) {
 		string=string.trim();
 		HomePage hp = new HomePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		hp.clickStack();
 		StackPage sp = new StackPage(driver);
 		if (string.equals("Operations in Stack")) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			sp.clickoperationsInStack();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 			
 		} else if (string.equals("Implementation")) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			sp.clickimplementation();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 		}else if (string.equals("Applications")) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			sp.clickapplications();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 		}else
@@ -223,6 +299,12 @@ public class SD10_Stack {
 	public void the_user_enter_python_code_with_syntax_in_try_editor_in_from_config_properties_in_stack_page(String string, String string2) {
 		TryHereRunPage rp=new TryHereRunPage(driver);
 		rp.setInput(ConfigReader.getProperty("app."+string));
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		rp.clickbutton();
 
 	}

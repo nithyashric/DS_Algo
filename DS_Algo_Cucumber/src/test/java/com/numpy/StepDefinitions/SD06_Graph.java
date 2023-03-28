@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import com.numpy.PageObjects.DataStructures_IntroPage;
 import com.numpy.PageObjects.GraphPage;
 import com.numpy.PageObjects.HomePage;
 import com.numpy.PageObjects.TryHerePage;
@@ -62,8 +60,20 @@ public class SD06_Graph {
 public void the_user_clicks_links_in_graph_page(String string) {
 	GraphPage gp = new GraphPage(driver);
 	if (string.equals("Graph")) {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		gp.clickGraph();
 	} else if (string.equals("Graph Representations")) {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		gp.clickGraphRepresentations();
 	}
 
@@ -84,7 +94,7 @@ public void the_user_should_be_redirected_to_particular_links_in_graph_page(Stri
 			Assert.assertTrue(false);
 		}
 	} else if (string.equals("Graph Representations")) {
-
+		
 		WebElement graphRepresentationsLabel = driver
 				.findElement(By.xpath("/html/body/div[2]/div/div[2]/strong/p"));
 
@@ -109,6 +119,12 @@ public void the_user_clicks_try_here_button_on_links_in_graph_page(String string
 	if (string.equals("Graph")) {
 					gp.clickGraph();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 		WebElement inputLabel = driver
@@ -123,6 +139,12 @@ public void the_user_clicks_try_here_button_on_links_in_graph_page(String string
 		}
 		
 	} else if (string.equals("Graph Representations")) {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		gp.clickGraphRepresentations();
 		TryHerePage th = new TryHerePage(driver);
@@ -149,14 +171,44 @@ public void the_user_is_on_the_in_graph_page_after_logged_in(String string) {
 	hp.clickGraph();
 	GraphPage gp = new GraphPage(driver);
 	if (string.equals("Graph")) {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		gp.clickGraph();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 		
 	} else if (string.equals("Graph Representations")) {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		gp.clickGraphRepresentations();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
@@ -167,6 +219,12 @@ public void the_user_enter_python_code_with_syntax_in_try_editor_in_from_config_
 	TryHereRunPage rp=new TryHereRunPage(driver);
 	
 	rp.setInput(ConfigReader.getProperty("app."+string));
+	try {
+		Thread.sleep(500);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	rp.clickbutton();
 }
 

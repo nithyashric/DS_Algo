@@ -31,6 +31,7 @@ public class SD08_Array {
 	public void the_user_clicks_the_getting_started_button_in_array_page() {
 		
 		HomePage hp = new HomePage(driver);
+		
 		hp.clickArray();
 	    
 	}
@@ -58,6 +59,7 @@ public class SD08_Array {
 	public void the_user_is_on_the_array_page_after_logged_in() {
 		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
+		
 		hp.clickArray();
 	    
 	}
@@ -170,9 +172,14 @@ public class SD08_Array {
 			}
 			
 		} else if (string.equals("Arrays Using List")) {
-			
 			ap.clickarraysUsingList();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 			WebElement inputLabel = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[6]/div[1]/div/div/div/div[5]/div/div/div"));
@@ -188,9 +195,20 @@ public class SD08_Array {
 		}
 		
 	else if (string.equals("Basic Operations in Lists")) {
-			
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 			ap.clickbasicsOperationsInLists();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -242,22 +260,46 @@ public class SD08_Array {
 		if (string.equals("Arrays in Python")) {
 			ap.clickarraysInPython();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 			
 		} else if (string.equals("Arrays Using List")) {
 			ap.clickarraysUsingList();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 		}else if (string.equals("Basic Operations in Lists")) {
 			ap.clickbasicsOperationsInLists();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 
 		}else if (string.equals("Applications of Array")) {
 			ap.clickapplicationsOfArray();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 		}
 		else
@@ -270,6 +312,12 @@ public class SD08_Array {
 	public void the_user_enter_python_code_with_syntax_in_try_editor_in_from_config_properties_in_array_page(String string, String string2) {
 		TryHereRunPage rp=new TryHereRunPage(driver);
 		rp.setInput(ConfigReader.getProperty("app."+string));
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		rp.clickbutton();
 	}
 

@@ -72,18 +72,17 @@ public class SD07_Tree {
 		}else if (string.equals("Traversals-Illustration")) {
 			tp.clickTraversals_Illustration();
 		}else if (string.equals("Binary Trees")) {
-			//if(timeComplexityLabel.getText().trim().equals("Binary Trees"))
 			tp.clickBinaryTrees();
 		}else if (string.equals("Types of Binary Trees")) {
-		tp.clickTypesOfBinaryTrees();
+			tp.clickTypesOfBinaryTrees();
 	}else if (string.equals("Implementation in Python")) {
-		tp.clickImplementationInPython();
+			tp.clickImplementationInPython();
 	}else if (string.equals("Binary Tree Traversals")) {
-		tp.clickBinaryTreeTraversals();
+			tp.clickBinaryTreeTraversals();
 	}else if (string.equals("Implementation of Binary Trees")) {
-		tp.clickImplementationOfBinaryTrees();
+			tp.clickImplementationOfBinaryTrees();
 	}else if (string.equals("Applications of Binary trees")) {
-		tp.clickApplicationsOfBinaryTrees();
+			tp.clickApplicationsOfBinaryTrees();
 	}else if (string.equals("Binary Search Trees")) {
 		tp.clickBinarySearchTrees();
 	}else if (string.equals("Implementation Of BST")) {
@@ -296,8 +295,14 @@ public void the_user_clicks_try_here_button_on_links_in_tree_page(String string)
 	hp.clickTree();
 	TreePage tp = new TreePage(driver);
 	if (string.equals("Overview of Trees")) {
-					tp.clickOverviewOfTrees();
+		tp.clickOverviewOfTrees();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 		WebElement inputLabel = driver
@@ -315,6 +320,12 @@ public void the_user_clicks_try_here_button_on_links_in_tree_page(String string)
 		
 		tp.clickTerminologies();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 		
 
@@ -332,7 +343,7 @@ public void the_user_clicks_try_here_button_on_links_in_tree_page(String string)
 	}
 	
 else if (string.equals("Types of Trees")) {
-		
+	
 		tp.clickTypesOfTrees();
 		TryHerePage th = new TryHerePage(driver);
 		th.clickTryHere();
@@ -353,6 +364,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickTreeTraversals();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -373,6 +390,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickTraversals_Illustration();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -393,6 +416,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickBinaryTrees();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -410,9 +439,14 @@ else if (string.equals("Types of Trees")) {
 		} 
 		
 		else if (string.equals("Types of Binary Trees")) {
-			
 			tp.clickTypesOfBinaryTrees();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -433,6 +467,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickImplementationInPython();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -453,6 +493,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickBinaryTreeTraversals();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -473,6 +519,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickImplementationOfBinaryTrees();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -493,6 +545,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickApplicationsOfBinaryTrees();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -513,6 +571,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickBinarySearchTrees();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -533,6 +597,12 @@ else if (string.equals("Types of Trees")) {
 			
 			tp.clickImplementationOfBST();
 			TryHerePage th = new TryHerePage(driver);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			th.clickTryHere();
 			
 
@@ -558,101 +628,192 @@ public void the_user_is_on_the_in_tree_page_after_logged_in(String string) {
 	hp.clickTree();
 	TreePage tp = new TreePage(driver);
 	if (string.equals("Overview of Trees")) {
+		
 		tp.clickOverviewOfTrees();;
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	} 
 	
 	else if (string.equals("Terminologies")) {
+		
 		tp.clickTerminologies();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 	
 	else if (string.equals("Types of Trees")) {
+		
 		tp.clickTypesOfTrees();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 	
 	else if (string.equals("Tree Traversals")) {
+		
 		tp.clickTreeTraversals();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Traversals-Illustration")) {
+		
 		tp.clickTraversals_Illustration();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Binary Trees")) {
+		
 		tp.clickBinaryTrees();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Types of Binary Trees")) {
+		
 		tp.clickTypesOfBinaryTrees();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Implementation in Python")) {
+		
 		tp.clickImplementationInPython();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Binary Tree Traversals")) {
+		
 		tp.clickBinaryTreeTraversals();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Implementation of Binary Trees")) {
+		
 		tp.clickImplementationOfBinaryTrees();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Applications of Binary trees")) {
+		
 		tp.clickApplicationsOfBinaryTrees();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Binary Search Trees")) {
+		
 		tp.clickBinarySearchTrees();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
 
 	
 	else if (string.equals("Implementation Of BST")) {
+		
 		tp.clickImplementationOfBST();
 		TryHerePage th = new TryHerePage(driver);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		th.clickTryHere();
 
 	}
@@ -666,6 +827,12 @@ public void the_user_enter_python_code_with_syntax_in_try_editor_in_from_config_
 TryHereRunPage rp=new TryHereRunPage(driver);
 	
 	rp.setInput(ConfigReader.getProperty("app."+string));
+	try {
+		Thread.sleep(500);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	rp.clickbutton();
 }
 
