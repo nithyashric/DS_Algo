@@ -23,7 +23,7 @@ public class SD06_Graph {
 
 	@BeforeAll
 	public static void setup() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		driver = DriverManager.getDriver();
 	}
 //@TS_DS_02
@@ -51,7 +51,7 @@ public class SD06_Graph {
 //TS_DS_03
 	@Given("The user is on the Graph page after logged in")
 	public void the_user_is_on_the_graph_page_after_logged_in() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		HomePage hp = new HomePage(driver);
 		hp.clickGraph();
 	}
@@ -60,20 +60,9 @@ public class SD06_Graph {
 public void the_user_clicks_links_in_graph_page(String string) {
 	GraphPage gp = new GraphPage(driver);
 	if (string.equals("Graph")) {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		gp.clickGraph();
 	} else if (string.equals("Graph Representations")) {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		gp.clickGraphRepresentations();
 	}
 
@@ -119,12 +108,6 @@ public void the_user_clicks_try_here_button_on_links_in_graph_page(String string
 	if (string.equals("Graph")) {
 					gp.clickGraph();
 		TryHerePage th = new TryHerePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		th.clickTryHere();
 
 		WebElement inputLabel = driver
@@ -139,13 +122,6 @@ public void the_user_clicks_try_here_button_on_links_in_graph_page(String string
 		}
 		
 	} else if (string.equals("Graph Representations")) {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 		gp.clickGraphRepresentations();
 		TryHerePage th = new TryHerePage(driver);
 		th.clickTryHere();
@@ -171,45 +147,18 @@ public void the_user_is_on_the_in_graph_page_after_logged_in(String string) {
 	hp.clickGraph();
 	GraphPage gp = new GraphPage(driver);
 	if (string.equals("Graph")) {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		gp.clickGraph();
 		TryHerePage th = new TryHerePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		th.clickTryHere();
 
 		
 	} else if (string.equals("Graph Representations")) {
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		gp.clickGraphRepresentations();
 		TryHerePage th = new TryHerePage(driver);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		th.clickTryHere();
+				th.clickTryHere();
 
 	}
 }

@@ -25,7 +25,7 @@ public class SD07_Tree {
 
 	@BeforeAll
 	public static void setup() {
-		MyLogger.error("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
+		MyLogger.info("Function:" + Thread.currentThread().getStackTrace()[1].getMethodName());
 		driver = DriverManager.getDriver();
 	}
 	//@TS_DS_02

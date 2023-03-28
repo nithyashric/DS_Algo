@@ -207,8 +207,12 @@ public class SD05_DataStructures_Intro {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		
 			driver.switchTo().alert().accept();
+			Screenshot.take(this.getClass().getName() + "_" + Thread.currentThread().getStackTrace()[1].getMethodName(),
+					driver);
 			if (rp.getOutput().equals("")) {
+				
 				Assert.assertTrue(true);
 				return;
 			}
